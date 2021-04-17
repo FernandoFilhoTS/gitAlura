@@ -5,6 +5,8 @@ git status                        // checks if you are in a git repository and i
 git add .                         // adds all files within the repository for a commit
 git commit -m "Description"       // commit code changes with a message 
 git log                           // lists commits
+git log --oneline                 // lists commits in one line
+git log -p                        // lists commits and it's details
 
 git remote add <name> <url>       // adds a remote repository
 git remote rename <f1> <newf>     // rename remote repository
