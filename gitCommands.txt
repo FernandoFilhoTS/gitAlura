@@ -7,7 +7,9 @@ git commit -m "Description"       // commit code changes with a message
 git log                           // lists commits
 git log --oneline                 // lists commits in one line
 git log -p                        // lists commits and it's details
+q                                 // quit vim on git log -p 
 
+git remote                        // lists remote repositories
 git remote add <name> <url>       // adds a remote repository
 git remote rename <f1> <newf>     // rename remote repository
 
