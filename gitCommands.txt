@@ -11,6 +11,7 @@ git add .                         // adds all files within the repository for a 
 git commit -m "Description"       // commit code changes with a message 
 git log                           // lists commits
 git log --oneline                 // lists commits in one line
+git log --graph                   // lists commits with graphic of branches and commits 
 git log -p                        // lists commits and it's details
 q                                 // quit vim on git log -p 
 
