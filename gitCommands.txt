@@ -19,7 +19,7 @@ git remote add <name> <url>       // adds a remote repository
 git remote rename <f1> <newf>     // rename remote repository
 git remote rm <name>              // removes a remote repository
 
-git clone <repository> <newDir>  // clones a repository to a new directory
+git clone <repository> <newDir>   // clones a repository to a new directory
 
 git push <server> master          // pushes the master of the repository you are in to the <server>
 git pull <server> master          // pulls the contents from the <server> to the master of the repository you are in
