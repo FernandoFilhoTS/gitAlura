@@ -25,6 +25,7 @@ git remote rm <name>              // removes a remote repository
 git clone <repository> <newDir>   // clones a repository to a new directory
 
 git push <server> master          // pushes the master of the repository you are in to the <server>
+git push -u origin master         // pushes the master of the repository you are in to the <server> and sets it as the default, so you can only type git push and will always push from the master to the origin
 git pull <server> master          // pulls the contents from the <server> to the master of the repository you are in
 
 git branch                        // lists branches and shows which one you are in
