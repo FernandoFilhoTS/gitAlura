@@ -52,6 +52,7 @@ git stash apply <stash #>         // applies the work in progress from the stash
 git stash pop                     // applies and deletes the last saved work in progress
 
 git checkout <commit #>           // takes you to the code version of the commit hash (the commits when the head is detached are only saved when you create a new branch from the commit and then merging to the master)
+                                  // to go back to a previous commit and code from there, you have to use the git checkout <commit #> command and in order for the changes made in this previous commit be saved, you have to use the git checkout -b <new branch> and commit the changes made in this new branch
 git switch -                      // reverts changes made when the head was detached and checks the head to the master
 
 git log -p                        // shows every chang of every commit
