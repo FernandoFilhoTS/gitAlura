@@ -15,6 +15,10 @@ git log --graph                   // lists commits with graphic of branches and 
 git log -p                        // lists commits and it's details
 q                                 // quit vim on git log -p 
 
+git diff                          // shows the code that hasn't yet been added for a commit
+git diff <#1>..<#2>               // shows the difference in the code that happened between two commits
+git diff --cached <file>          // show difference in file before commit
+
 git rev-list --count <revision>   // commit count for a revision (HEAD, master, a commit hash)
 git rev-list --all --count        // git rev-list --all --count
 
@@ -30,9 +34,12 @@ git push -u origin master         // pushes the master of the repository you are
 git pull <server> master          // pulls the contents from the <server> to the master of the repository you are in
 
 git branch                        // lists branches and shows which one you are in
-git branch <branch name>          // creates a new branch
-git checkout <branch name>        // switches to another branch
-git checkout -b <branch name>     // creates a new branch and switches to it
+git branch <branch>               // creates a new branch
+git checkout <branch>             // switches to another branch
+git checkout -b <branch>          // creates a new branch and switches to it
+git switch <branch>               // switches to another branch (same as git checkout)
+git switch -                      // switches to the previous branch
+git switch -c                     // switches to a new branch
 git merge <branch>                // merges a branch to the branch you are in
                                   // if you are on master and use git merge <other branch>, the other branch will be merged with the master (the one you're in now), but the other branch will remain the same
 git rebase <branch>               // rebases a branch but doesn't creates
@@ -53,12 +60,6 @@ git stash pop                     // applies and deletes the last saved work in 
 
 git checkout <commit #>           // takes you to the code version of the commit hash (the commits when the head is detached are only saved when you create a new branch from the commit and then merging to the master)
                                   // to go back to a previous commit and code from there, you have to use the git checkout <commit #> command and in order for the changes made in this previous commit be saved, you have to use the git checkout -b <new branch> and commit the changes made in this new branch
-git switch -                      // reverts changes made when the head was detached and checks the head to the master
-
-git log -p                        // shows every chang of every commit
-git diff                          // shows the code that hasn't yet been added for a commit
-git diff <#1>..<#2>               // shows the difference in the code that happened between two commits
-git diff --cached <file>          // show difference in file before commit
 
 git tag                           // lists all tags
 git tag -a <name> -m "message"    // creates a tag
