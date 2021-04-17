@@ -2,6 +2,11 @@ git init                          // initialize git repository
 git init --bare                   // initialize git server
 git status                        // checks if you are in a git repository and if there are any changes since the last commit
 
+git config --local user.name      // sets user name as local
+git config --local user.email     // sets user email as local
+git config --global user.name     // sets user name as global
+git config --global user.email    // sets user email as global
+
 git add .                         // adds all files within the repository for a commit
 git commit -m "Description"       // commit code changes with a message 
 git log                           // lists commits
