@@ -44,7 +44,6 @@ git restore <file>                // undoes the changes made that still hasn't b
 git restore --staged <file>       // takes the file out of the list of files ready to be committed
 git revert <commit hash>          // reverts a commit by creating a new commit undoing the changes
 
-
 git stash                         // saves a work in progress
 git stash list                    // list all saved work in progress
 git stash drop <stash #>          // deletes the work in progress from the stash list
@@ -64,3 +63,9 @@ git tag -a <name> -m "message"    // creates a tag
 git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
 
 rm -rf .git                       // removes git from directory
+
+
+
+
+
+rebase test - this should appear on the master after rebase
