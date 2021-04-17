@@ -36,7 +36,7 @@ git checkout -b <branch name>     // creates a new branch and switches to it
 git merge <branch>                // merges a branch to the branch you are in
                                   // if you are on master and use git merge <other branch>, the other branch will be merged with the master (the one you're in now), but the other branch will remain the same
 git rebase <branch>               // rebases a branch but doesn't creates
-                                  // rebasing a branch brings the history of commits of the branch you are rebasing (and updates the other branch?)
+                                  // rebasing a branch brings the history of commits of the branch you are rebasing (still does NOT update the other branch)
 
 git checkout -- <file>            // undoes the changes made that still hasn't been added to be committed
 git reset                         // unstages all files
@@ -44,7 +44,6 @@ git reset HEAD <file>             // takes the file out of the list of files rea
 git restore <file>                // undoes the changes made that still hasn't been added to be committed
 git restore --staged <file>       // takes the file out of the list of files ready to be committed
 git revert <commit hash>          // reverts a commit by creating a new commit undoing the changes
-
 
 git stash                         // saves a work in progress
 git stash list                    // list all saved work in progress
@@ -65,3 +64,4 @@ git tag -a <name> -m "message"    // creates a tag
 git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
 
 rm -rf .git                       // removes git from directory
+
