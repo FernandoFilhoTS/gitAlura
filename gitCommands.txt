@@ -47,3 +47,5 @@ git diff <#1>..<#2>               // shows the difference in the code that happe
 git tag                           // lists all tags
 git tag -a <name> -m "message"    // creates a tag
 git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
+
+rm -rf .git                       // removes git from directory
