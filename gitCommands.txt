@@ -54,6 +54,7 @@ git switch -                      // reverts changes made when the head was deta
 git log -p                        // shows every chang of every commit
 git diff                          // shows the code that hasn't yet been added for a commit
 git diff <#1>..<#2>               // shows the difference in the code that happened between two commits
+git diff --cached <file>          // show difference in file before commit
 
 git tag                           // lists all tags
 git tag -a <name> -m "message"    // creates a tag
