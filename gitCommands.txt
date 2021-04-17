@@ -65,5 +65,5 @@ git tag                           // lists all tags
 git tag -a <name> -m "message"    // creates a tag
 git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
 
-rm -rf .git                       // removes git from directory
+rm -rf .git                       // removes git from directory (alternatively, you can enable hidden folders on windows and delete the .git folder)
 
