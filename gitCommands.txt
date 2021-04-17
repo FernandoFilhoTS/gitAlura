@@ -14,6 +14,9 @@ git log --oneline                 // lists commits in one line
 git log -p                        // lists commits and it's details
 q                                 // quit vim on git log -p 
 
+git rev-list --count <revision>   // commit count for a revision (HEAD, master, a commit hash)
+git rev-list --all --count        // git rev-list --all --count
+
 git remote                        // lists remote repositories
 git remote add <name> <url>       // adds a remote repository
 git remote rename <f1> <newf>     // rename remote repository
