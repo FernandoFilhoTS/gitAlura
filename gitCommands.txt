@@ -12,6 +12,7 @@ q                                 // quit vim on git log -p
 git remote                        // lists remote repositories
 git remote add <name> <url>       // adds a remote repository
 git remote rename <f1> <newf>     // rename remote repository
+git remote rm <name>              // removes a remote repository
 
 git clone <repository> <newDir>  // clones a repository to a new directory
 
