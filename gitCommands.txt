@@ -37,10 +37,12 @@ git merge <branch>                // merges a branch to the branch you are in
 git rebase <branch>               // rebases a branch but doesn't creates
 
 git checkout -- <file>            // undoes the changes made that still hasn't been added to be committed
+git reset                         // unstages all files
 git reset HEAD <file>             // takes the file out of the list of files ready to be committed
 git restore <file>                // undoes the changes made that still hasn't been added to be committed
 git restore --staged <file>       // takes the file out of the list of files ready to be committed
 git revert <commit hash>          // reverts a commit by creating a new commit undoing the changes
+
 
 git stash                         // saves a work in progress
 git stash list                    // list all saved work in progress
