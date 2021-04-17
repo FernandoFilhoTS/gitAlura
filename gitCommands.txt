@@ -36,6 +36,7 @@ git checkout -b <branch name>     // creates a new branch and switches to it
 git merge <branch>                // merges a branch to the branch you are in
                                   // if you are on master and use git merge <other branch>, the other branch will be merged with the master (the one you're in now), but the other branch will remain the same
 git rebase <branch>               // rebases a branch but doesn't creates
+                                  // rebasing a branch brings the history of commits of the branch you are rebasing (and updates the other branch?)
 
 git checkout -- <file>            // undoes the changes made that still hasn't been added to be committed
 git reset                         // unstages all files
