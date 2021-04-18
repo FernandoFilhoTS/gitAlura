@@ -1,96 +1,96 @@
-git init                          // initialize git repository
-git init --bare                   // initialize git server
-git status                        // checks if you are in a git repository and if there are any changes since the last commit
+git init                            // initialize git repository
+git init --bare                     // initialize git server
+git status                          // checks if you are in a git repository and if there are any changes since the last commit
 
-git config --local user.name      // sets user name as local
-git config --local user.email     // sets user email as local
-git config --global user.name     // sets user name as global
-git config --global user.email    // sets user email as global
+git config --local user.name        // sets user name as local
+git config --local user.email       // sets user email as local
+git config --global user.name       // sets user name as global
+git config --global user.email      // sets user email as global
 
-git add .                         // adds all files within the repository for a commit
-git commit -m "Description"       // commit code changes with a message 
-git log                           // lists commits
-git log --oneline                 // lists commits in one line
-git log --graph                   // lists commits with graphic of branches and commits 
-git log -p                        // lists commits and it's details
-q                                 // quit vim on git log -p 
+git add .                           // adds all files within the repository for a commit
+git commit -m "Description"         // commit code changes with a message 
+git log                             // lists commits
+git log --oneline                   // lists commits in one line
+git log --graph                     // lists commits with graphic of branches and commits 
+git log -p                          // lists commits and it's details
+q                                   // quit vim on git log -p 
 
-git diff                          // shows the code that hasn't yet been added for a commit
-git diff <#1>..<#2>               // shows the difference in the code that happened between two commits
-git diff --cached <file>          // show difference in file before commit
+git diff                            // shows the code that hasn't yet been added for a commit
+git diff <#1>..<#2>                 // shows the difference in the code that happened between two commits
+git diff --cached <file>            // show difference in file before commit
 
-git rev-list --count <revision>   // commit count for a revision (HEAD, master, a commit hash)
-git rev-list --all --count        // git rev-list --all --count
+git rev-list --count <revision>     // commit count for a revision (HEAD, master, a commit hash)
+git rev-list --all --count          // git rev-list --all --count
 
-git remote                        // lists remote repositories
-git remote add <name> <url>       // adds a remote repository
-git remote rename <f1> <newf>     // rename remote repository
-git remote rm <name>              // removes a remote repository
+git remote                          // lists remote repositories
+git remote add <name> <url>         // adds a remote repository
+git remote rename <f1> <newf>       // rename remote repository
+git remote rm <name>                // removes a remote repository
 
-git clone <repository> <newDir>   // clones a repository to a new directory
+git clone <repository> <newDir>     // clones a repository to a new directory
 
-git push <server> master          // pushes the master of the repository you are in to the <server>
-git push -u origin master         // pushes the master of the repository you are in to the <server> and sets it as the default, so you can only type git push and will always push from the master to the origin
-git pull <server> master          // pulls the contents from the <server> to the master of the repository you are in
+git push <server> master            // pushes the master of the repository you are in to the <server>
+git push -u origin master           // pushes the master of the repository you are in to the <server> and sets it as the default, so you can only type git push and will always push from the master to the origin
+git pull <server> master            // pulls the contents from the <server> to the master of the repository you are in
 
-git branch                        // lists branches and shows which one you are in
-git branch <branch>               // creates a new branch
-git checkout <branch>             // switches to another branch
-git checkout -b <branch>          // creates a new branch and switches to it
-git switch <branch>               // switches to another branch (same as git checkout)
-git switch -                      // switches to the previous branch
-git switch -c                     // switches to a new branch
-git merge <branch>                // merges a branch to the branch you are in
-                                  // if you are on master and use git merge <other branch>, the other branch will be merged with the master (the one you're in now), but the other branch will remain the same
-git rebase <branch>               // rebases a branch but doesn't creates
-                                  // rebasing a branch brings the history of commits of the branch you are rebasing (still does NOT update the other branch)
-git rebase -i HEAD~<number>       // joining commits into one
-                                  // -i means interactive, to open vim
-                                  // HEAD means the current branch/work
-                                  // the number should be the number of previous commits you want to join into one
-                                  // on vim, change the command 'pick' to 's' to squash other commits to the one that has the command 'pick' (1 'pick' and the others are 's')
+git branch                          // lists branches and shows which one you are in
+git branch <branch>                 // creates a new branch
+git checkout <branch>               // switches to another branch
+git checkout -b <branch>            // creates a new branch and switches to it
+git switch <branch>                 // switches to another branch (same as git checkout)
+git switch -                        // switches to the previous branch
+git switch -c                       // switches to a new branch
+git merge <branch>                  // merges a branch to the branch you are in
+                                    // if you are on master and use git merge <other branch>, the other branch will be merged with the master (the one you're in now), but the other branch will remain the same
+git rebase <branch>                 // rebases a branch but doesn't creates
+                                    // rebasing a branch brings the history of commits of the branch you are rebasing (still does NOT update the other branch)
+git rebase -i HEAD~<number>         // joining commits into one
+                                    // -i means interactive, to open vim
+                                    // HEAD means the current branch/work
+                                    // the number should be the number of previous commits you want to join into one
+                                    // on vim, change the command 'pick' to 's' to squash other commits to the one that has the command 'pick' (1 'pick' and the others are 's')
 
-git checkout -- <file>            // undoes the changes made that still hasn't been added to be committed (before git add .)
-git reset                         // unstages all files (after git add . and before git commit)
-git reset HEAD <file>             // takes the file out of the list of staged files ready to be committed (after git add . and before git commit)
-git revert <commit hash>          // reverts a commit by creating a new commit undoing the changes (after git commit)
-git restore <file>                // undoes the changes made that still hasn't been added to be committed
-git restore --staged <file>       // takes the file out of the list of files ready to be committed
+git checkout -- <file>              // undoes the changes made that still hasn't been added to be committed (before git add .)
+git reset                           // unstages all files (after git add . and before git commit)
+git reset HEAD <file>               // takes the file out of the list of staged files ready to be committed (after git add . and before git commit)
+git revert <commit hash>            // reverts a commit by creating a new commit undoing the changes (after git commit)
+git restore <file>                  // undoes the changes made that still hasn't been added to be committed
+git restore --staged <file>         // takes the file out of the list of files ready to be committed
 
-git stash                         // saves a work in progress
-git stash list                    // list all saved work in progress
-git stash drop <stash #>          // deletes the work in progress from the stash list
-git stash apply <stash #>         // applies the work in progress from the stash list
-git stash pop                     // applies and deletes the last saved work in progress
+git stash                           // saves a work in progress
+git stash list                      // list all saved work in progress
+git stash drop <stash #>            // deletes the work in progress from the stash list
+git stash apply <stash #>           // applies the work in progress from the stash list
+git stash pop                       // applies and deletes the last saved work in progress
 
-git checkout <commit #>           // takes you to the code version of the commit hash (the commits when the head is detached are only saved when you create a new branch from the commit and then merging to the master)
-                                  // to go back to a previous commit and code from there, you have to use the git checkout <commit #> command and in order for the changes made in this previous commit be saved, you have to use the git checkout -b <new branch> and commit the changes made in this new branch
+git checkout <commit #>             // takes you to the code version of the commit hash (the commits when the head is detached are only saved when you create a new branch from the commit and then merging to the master)
+                                    // to go back to a previous commit and code from there, you have to use the git checkout <commit #> command and in order for the changes made in this previous commit be saved, you have to use the git checkout -b <new branch> and commit the changes made in this new branch
 
-git cherry-pick <#>               // gets a commit by its hashcode and ads to the current HEAD
+git cherry-pick <#>                 // gets a commit by its hashcode and ads to the current HEAD
 
-git tag                           // lists all tags
-git tag -a <name> -m "message"    // creates a tag
-git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
+git tag                             // lists all tags
+git tag -a <name> -m "message"      // creates a tag
+git push <repository> <tagName>     // sends a tag (release) to the GitHub directory
 
-rm -rf .git                       // removes git from directory (alternatively, you can enable hidden folders on windows and delete the .git folder)
-
+When git bash has something like (master|CHERRY-PICKING), to abort this HEAD state you have to use the same command, adding --abort to the end of it (git cherry-pick --abort)
+rm -rf .git                         // removes git from directory (alternatively, you can enable hidden folders on windows and delete the .git folder)
 
 
 ########################################################## VIM #########################################################
 
-ESC                               // go to command mode
-:q                                // quit vim on command mode
-:wq                               // write and quit on command mode
-:q!                               // quit withou saving on command mode
-dd                                // delete a line on command mode
-Xdd                               // deletes X lines on command mode
-u                                 // undo on command mode
-CTRL + r                          // redo on command mode
-/searchstring                     // search for the searchstring on command mode
-n                                 // goes to the next match on command mode
-N                                 // goes to the previous match on command mode
+ESC                                 // go to command mode
+:q                                  // quit vim on command mode
+:wq                                 // write and quit on command mode
+:q!                                 // quit withou saving on command mode
+dd                                  // delete a line on command mode
+Xdd                                 // deletes X lines on command mode
+u                                   // undo on command mode
+CTRL + r                            // redo on command mode
+/searchstring                       // search for the searchstring on command mode
+n                                   // goes to the next match on command mode
+N                                   // goes to the previous match on command mode
 
 
-i                                 // go to insert mode
+i                                   // go to insert mode
 
 
