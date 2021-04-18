@@ -48,7 +48,7 @@ git rebase -i HEAD~<number>       // joining commits into one
                                   // -i means interactive, to open vim
                                   // HEAD means the current branch/work
                                   // the number should be the number of previous commits you want to join into one
-                                  // on vim, change the command 'pick' to 's' to squash other commits to the one that has the command 'pick'
+                                  // on vim, change the command 'pick' to 's' to squash other commits to the one that has the command 'pick' (1 'pick' and the others are 's')
 
 git checkout -- <file>            // undoes the changes made that still hasn't been added to be committed (before git add .)
 git reset                         // unstages all files (after git add . and before git commit)
@@ -71,4 +71,24 @@ git tag -a <name> -m "message"    // creates a tag
 git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
 
 rm -rf .git                       // removes git from directory (alternatively, you can enable hidden folders on windows and delete the .git folder)
+
+
+
+########################################################## VIM #########################################################
+
+ESC                               // go to command mode
+:q                                // quit vim on command mode
+:wq                               // write and quit on command mode
+:q!                               // quit withou saving on command mode
+dd                                // delete a line on command mode
+Xdd                               // deletes X lines on command mode
+u                                 // undo on command mode
+CTRL + r                          // redo on command mode
+/searchstring                     // search for the searchstring on command mode
+n                                 // goes to the next match on command mode
+N                                 // goes to the previous match on command mode
+
+
+i                                 // go to insert mode
+
 
