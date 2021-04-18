@@ -63,10 +63,19 @@ git stash drop <stash #>            // deletes the work in progress from the sta
 git stash apply <stash #>           // applies the work in progress from the stash list
 git stash pop                       // applies and deletes the last saved work in progress
 
+git show <#>                        // shows what was changed in that commit (similar to git diff)
 git checkout <commit #>             // takes you to the code version of the commit hash (the commits when the head is detached are only saved when you create a new branch from the commit and then merging to the master)
                                     // to go back to a previous commit and code from there, you have to use the git checkout <commit #> command and in order for the changes made in this previous commit be saved, you have to use the git checkout -b <new branch> and commit the changes made in this new branch
 
 git cherry-pick <#>                 // gets a commit by its hashcode and ads to the current HEAD
+
+git bisect start                    // used to single-out a commit that introduced unwanted code by giving feedback afte git biscet presents a commit for you to test if is to your linking
+git bisect good <#>                 // giving the last known good commit hash
+git bisect bad <#>                  // the first known bad commit hash (if you don't pass anything at the end, it'll assume is your current HEAD)
+                                    // after giving the start and end, it will present commits in between for you to test and see if it works
+git bisect bad                      // if it doesn't work, give this command as feedback and git will present a new hash to test until it's good
+git bisect good                     // if it works, give this command as feedback and git will show the information of the first bad commit (complete hash, author and date of the commit, and the files changed)
+git bisect reset                    // once the bad commit is found, this command will switch the HEAD from the detached state it was in, to the last good commit
 
 git tag                             // lists all tags
 git tag -a <name> -m "message"      // creates a tag
