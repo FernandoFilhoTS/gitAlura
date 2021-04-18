@@ -66,6 +66,8 @@ git stash pop                     // applies and deletes the last saved work in 
 git checkout <commit #>           // takes you to the code version of the commit hash (the commits when the head is detached are only saved when you create a new branch from the commit and then merging to the master)
                                   // to go back to a previous commit and code from there, you have to use the git checkout <commit #> command and in order for the changes made in this previous commit be saved, you have to use the git checkout -b <new branch> and commit the changes made in this new branch
 
+git cherry-pick <#>               // gets a commit by its hashcode and ads to the current HEAD
+
 git tag                           // lists all tags
 git tag -a <name> -m "message"    // creates a tag
 git push <repository> <tagName>   // sends a tag (release) to the GitHub directory
